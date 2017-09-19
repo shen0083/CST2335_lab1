@@ -21,6 +21,8 @@
         android:text="@string/RadioButton"
  />
 
+
+    
     <Switch
         android:id="@+id/switch2"
         android:layout_width="wrap_content"
