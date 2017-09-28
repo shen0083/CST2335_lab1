@@ -41,7 +41,6 @@ public class StartActivity extends Activity {
         }
     }
 
-
     @Override
     protected void onResume() {
         super.onResume();

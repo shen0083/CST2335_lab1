@@ -47,14 +47,14 @@ public class ListItemsActivity extends Activity {
             public void onCheckedChanged(CompoundButton switchchange, boolean isChecked) {
 
                 if (switchchange.isChecked()) {
-                    text = "Switch is On";
-                    duration = Toast.LENGTH_SHORT;
+                    Toast toast = Toast.makeText(getApplicationContext(), R.string.text1, Toast.LENGTH_SHORT);
+                    toast.show();
+
                 } else {
-                    text = "Switch is Off";
-                    duration = Toast.LENGTH_LONG;
+                    Toast toast = Toast.makeText(getApplicationContext(), R.string.text2, Toast.LENGTH_LONG);
+                    toast.show();
                 }
-                Toast toast = Toast.makeText(getApplicationContext(), text, duration);
-                toast.show();
+
             }
         });
 

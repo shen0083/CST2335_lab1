@@ -11,5 +11,7 @@
     <string name="dialog_title">TITLE</string>
     <string name="OK">OK</string>
     <string name="cancel">CANCEL</string>
-
+    <string name="text1">Switch is On</string>
+    <string name="text2">Switch is Off</string>
+    <string name="text3">Here is my response</string>
 </resources>
