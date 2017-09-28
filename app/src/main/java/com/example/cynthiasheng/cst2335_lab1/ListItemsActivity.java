@@ -1,3 +1,5 @@
+//Xia Sheng 040861988
+
 package com.example.cynthiasheng.cst2335_lab1;
 
 import android.app.Activity;
@@ -9,7 +11,6 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageButton;
