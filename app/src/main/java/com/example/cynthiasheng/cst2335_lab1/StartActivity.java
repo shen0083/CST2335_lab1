@@ -18,6 +18,7 @@ public class StartActivity extends Activity {
         setContentView(R.layout.activity_start);
         Log.i(ACTIVITY_NAME, "In onCreate()");
 
+
         Button b1 = (Button) findViewById(R.id.button);
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -27,7 +28,17 @@ public class StartActivity extends Activity {
             }
         }
         );
+
+        Button b2 = (Button) findViewById(R.id.chatbutton);
+        b2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+            Log.i(ACTIVITY_NAME, "User clicked Start Chat");
+                Intent intent = new Intent(StartActivity.this, ChatWindowActivity.class);
+                startActivity(intent);
+            }
+        });
     }
+
 
     protected void onActivityResult(int requestCode, int responseCode, Intent data)  {
         if (requestCode == 10)  {
@@ -40,6 +51,11 @@ public class StartActivity extends Activity {
             toast.show();
         }
     }
+
+
+
+
+
 
     @Override
     protected void onResume() {

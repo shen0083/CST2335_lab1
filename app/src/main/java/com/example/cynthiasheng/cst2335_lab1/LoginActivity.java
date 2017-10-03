@@ -54,7 +54,7 @@ public class LoginActivity extends Activity {
     @Override
     protected void onStart() {
         super.onStart();
-        Log.i(ACTIVITY_NAME, "In onResume()");
+        Log.i(ACTIVITY_NAME, "In onStart()");
     }
 
     @Override

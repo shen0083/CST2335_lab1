@@ -14,4 +14,6 @@
     <string name="text1">Switch is On</string>
     <string name="text2">Switch is Off</string>
     <string name="text3">Here is my response</string>
+    <string name="chat">Start Chat</string>
+    <string name="send">SEND</string>
 </resources>

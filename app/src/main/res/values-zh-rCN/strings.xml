@@ -17,5 +17,7 @@
     <string name="text1">开</string>
     <string name="text2">关</string>
     <string name="text3">这是我的选择</string>
+    <string name="chat">开始通话</string>
+    <string name="send">发送</string>
 </resources>
 
