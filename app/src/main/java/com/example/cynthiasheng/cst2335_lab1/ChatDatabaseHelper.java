@@ -35,6 +35,15 @@ public class ChatDatabaseHelper extends SQLiteOpenHelper {
         Log.i("ChatDatabaseHelper", "Calling onUpgrade, oldVersion=" + oldVersion + "newVersion=" + newVersion);
 
     }
+    @Override
+    public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion)
+    {
+        db.execSQL("DROP TABLE IF EXISTS " + name); //delete what was there previously
+        onCreate(db);
+        Log.i("ChatDatabaseHelper", "Calling onCreate");
+        Log.i("ChatDatabaseHelper", "Calling onDowngrade, newVersion=" + newVersion + "oldVersion=" + oldVersion);
+
+    }
 
     @Override
     public void onOpen(SQLiteDatabase db)
