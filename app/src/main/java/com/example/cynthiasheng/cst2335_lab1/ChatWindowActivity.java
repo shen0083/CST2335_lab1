@@ -27,7 +27,8 @@ public class ChatWindowActivity extends Activity {
     ArrayList<String> userList = new ArrayList<String>();
     String input;
     ChatAdapter messageAdapter;
-
+    SQLiteDatabase db;
+    Cursor curs;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,9 +44,9 @@ public class ChatWindowActivity extends Activity {
         contentList.setAdapter(messageAdapter);
 
         ChatDatabaseHelper aHelperObject = new ChatDatabaseHelper(this);
-        final SQLiteDatabase db = aHelperObject.getWritableDatabase();
+         db = aHelperObject.getWritableDatabase();
 
-        Cursor curs= db.rawQuery("select * from MyTable",null);
+        curs= db.rawQuery("select * from "+ChatDatabaseHelper.name,null);
 
         int messageIndex = curs.getColumnIndex(ChatDatabaseHelper.KEY_MESSAGE);
         if(curs.moveToFirst()) {
@@ -60,7 +61,7 @@ public class ChatWindowActivity extends Activity {
         Log.i(ACTIVITY_NAME, "Cursor’s  column count =" + curs.getColumnCount());
 
         for(int i = 0; i <curs.getColumnCount();i++){
-            System.out.println(curs.getColumnName(i));
+            System.out.println(curs.getColumnName(i)+ "----------------------------------------------------------------------");
         }
 
 
@@ -133,7 +134,8 @@ public class ChatWindowActivity extends Activity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        //db.close();
+        db.close();
+        curs.close();
         Log.i(ACTIVITY_NAME, "In onDestroy()");
     }
 }
