@@ -61,7 +61,7 @@ public class ChatWindowActivity extends Activity {
         Log.i(ACTIVITY_NAME, "Cursor’s  column count =" + curs.getColumnCount());
 
         for(int i = 0; i <curs.getColumnCount();i++){
-            System.out.println(curs.getColumnName(i)+ "----------------------------------------------------------------------");
+            System.out.println(curs.getColumnName(i));
         }
 
 
@@ -74,8 +74,8 @@ public class ChatWindowActivity extends Activity {
                 userEdit.setText("");
 
                 ContentValues newData = new ContentValues();
-                newData.put("MESSAGE", input);
-                db.insert("MyTable", "" , newData);
+                newData.put(ChatDatabaseHelper.KEY_MESSAGE, input);
+                db.insert(ChatDatabaseHelper.name, "" , newData);
             }
         });
     }

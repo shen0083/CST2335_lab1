@@ -20,5 +20,9 @@
     <string name="chat">开始通话</string>
     <string name="send">发送</string>
     <string name="insert">插入</string>
+    <string name="weatherforecast">天气预报</string>
+    <string name="currentTemperature">当前温度</string>
+    <string name="minTemperature">最低温度</string>
+    <string name="maxTemperature">最高温度</string>
 </resources>
 

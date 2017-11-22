@@ -17,4 +17,8 @@
     <string name="chat">Start Chat</string>
     <string name="send">SEND</string>
     <string name="insert">INSERT</string>
+    <string name="weatherforecast">weatherforecast</string>
+    <string name="currentTemperature">current Temperature</string>
+    <string name="minTemperature">Minimum Temperature</string>
+    <string name="maxTemperature">Maximum Temperature</string>
 </resources>
