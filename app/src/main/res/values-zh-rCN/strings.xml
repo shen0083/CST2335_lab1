@@ -24,5 +24,8 @@
     <string name="currentTemperature">当前温度</string>
     <string name="minTemperature">最低温度</string>
     <string name="maxTemperature">最高温度</string>
+    <string name="deleteMessageButton">删除此消息</string>
+    <string name="chatIDTextView">ID = </string>
+    <string name="chatMessageTextView">消息</string>
 </resources>
 

@@ -21,4 +21,7 @@
     <string name="currentTemperature">current Temperature</string>
     <string name="minTemperature">Minimum Temperature</string>
     <string name="maxTemperature">Maximum Temperature</string>
+    <string name="deleteMessageButton">DELETE THIS MESSAGE</string>
+    <string name="chatIDTextView">ID = </string>
+    <string name="chatMessageTextView">MessageHere</string>
 </resources>
