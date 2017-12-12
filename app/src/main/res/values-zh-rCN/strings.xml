@@ -27,5 +27,11 @@
     <string name="deleteMessageButton">删除此消息</string>
     <string name="chatIDTextView">ID = </string>
     <string name="chatMessageTextView">消息</string>
+    <string name="actionOne">选择1</string>
+    <string name="actionTwo">选择2</string>
+    <string name="actionThree">选择3</string>
+    <string name="about">关于</string>
+    <string name="newmessage">新消息</string>
+    <string name="title_activity_test_toolbar">工具栏</string>
 </resources>
 

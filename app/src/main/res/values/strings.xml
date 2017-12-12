@@ -24,4 +24,10 @@
     <string name="deleteMessageButton">DELETE THIS MESSAGE</string>
     <string name="chatIDTextView">ID = </string>
     <string name="chatMessageTextView">MessageHere</string>
+    <string name="title_activity_test_toolbar">TestToolbar</string>
+    <string name="actionOne">Choice 1</string>
+    <string name="actionTwo">Choice 2</string>
+    <string name="actionThree">Choice 3</string>
+    <string name="about">About</string>
+    <string name="newmessage">New Message</string>
 </resources>

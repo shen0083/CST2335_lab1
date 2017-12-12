@@ -47,5 +47,14 @@
             android:layout_below="@+id/chatbutton"
             android:layout_centerHorizontal="true"
             android:text="@string/weatherforecast" />
+
+    <Button
+        android:id="@+id/toolbarbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weatherbutton"
+        android:layout_centerHorizontal="true"
+        android:text="@string/title_activity_test_toolbar"
+        />
     </RelativeLayout>
 
