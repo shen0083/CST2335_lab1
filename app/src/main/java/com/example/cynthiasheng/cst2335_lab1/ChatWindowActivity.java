@@ -49,9 +49,6 @@ public class ChatWindowActivity extends Activity {
         userEdit = (EditText) findViewById(R.id.userEdit);
         userSend = (Button) findViewById(R.id.sendButton);
 
-        //in this case, “this” is the ChatWindow, which is-A Context object
-        messageAdapter=new ChatAdapter(this);
-        contentList.setAdapter(messageAdapter);
 
         landscapeFrameLayout = (FrameLayout) findViewById(R.id.landscapeFrameLayout);
 
@@ -64,6 +61,9 @@ public class ChatWindowActivity extends Activity {
             isLandscape = true;
             Log.i(ACTIVITY_NAME, "The phone is on landscape layout.");
         }
+
+        messageAdapter=new ChatAdapter(this);
+        contentList.setAdapter(messageAdapter);
 
 
         ChatDatabaseHelper aHelperObject = new ChatDatabaseHelper(this);
@@ -120,17 +120,19 @@ public class ChatWindowActivity extends Activity {
 
                 if(isLandscape == true){
                     MessageFragment messageFragment = new MessageFragment();
-
                     messageFragment.setArguments(bundle);
-                    FragmentManager fragmentManager =getFragmentManager();
-                    //remove previous fragment
-                    if (fragmentManager.getBackStackEntryCount() > 0) {
-                        FragmentManager.BackStackEntry first = fragmentManager.getBackStackEntryAt(0);
-                        fragmentManager.popBackStack(first.getId(), FragmentManager.POP_BACK_STACK_INCLUSIVE);
-                    }
+//                    FragmentManager fragmentManager =getFragmentManager();
+//                    //remove previous fragment
+//                    if (fragmentManager.getBackStackEntryCount() > 0) {
+//                        FragmentManager.BackStackEntry first = fragmentManager.getBackStackEntryAt(0);
+//                        fragmentManager.popBackStack(first.getId(), FragmentManager.POP_BACK_STACK_INCLUSIVE);
+//                    }
 
-                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                    fragmentTransaction.add(R.id.landscapeFrameLayout, messageFragment).addToBackStack(null).commit();
+                    FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                    fragmentTransaction.replace(R.id.landscapeFrameLayout,messageFragment);
+                   fragmentTransaction.addToBackStack(null);
+                   fragmentTransaction.commit();
+                    // fragmentTransaction.add(R.id.landscapeFrameLayout, messageFragment).addToBackStack(null).commit();
                 }
                 else{
                     intent.putExtra("bundle", bundle);

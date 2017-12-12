@@ -23,7 +23,7 @@ public class MessageFragment extends Fragment{
         //ChatWindow chatWindow = new ChatWindow();
         writeableDB = chatDatabaseHelper.getWritableDatabase();
 
-        Bundle bundle = this.getArguments();
+        final Bundle bundle = this.getArguments();
         final long id = bundle.getLong("id");
         String msg = bundle.getString("message");
         final boolean isLandscape = bundle.getBoolean("isLandscape");
@@ -38,6 +38,7 @@ public class MessageFragment extends Fragment{
                 if (isLandscape) {
                     writeableDB.delete(ChatDatabaseHelper.name, ChatDatabaseHelper.KEY_ID + "=" + id, null);
                     getActivity().finish();
+                    getActivity().getFragmentManager().beginTransaction().remove(MessageFragment.this).commit();
                     Intent intent = getActivity().getIntent();
                     startActivity(intent);
                 }
